@@ -260,6 +260,10 @@ if ( typeof Object.create !== 'function' ) {
 				//self.zoomContainer = $('<div/>').addClass('zoomContainer').css({"position":"relative", "height":self.nzHeight, "width":self.nzWidth});
 
 				self.zoomContainer = $('<div class="zoomContainer" style="-webkit-transform: translateZ(0);position:absolute;left:'+self.nzOffset.left+'px;top:'+self.nzOffset.top+'px;height:'+self.nzHeight+'px;width:'+self.nzWidth+'px;"></div>');
+
+        if ($('.zoomContainer').length > 0) {
+					$('.zoomContainer').remove();
+				}
 				$('body').append(self.zoomContainer);
 
 
